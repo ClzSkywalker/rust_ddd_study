@@ -1,6 +1,6 @@
-use super::aggregate_root::AggregateRoot;
+use super::{aggregate_root::AggregateRoot, marker_interface::MarkerInterface};
 
-pub trait Repository<AG, ID>
+pub trait Repository<AG, ID>: MarkerInterface
 where
     AG: AggregateRoot,
 {

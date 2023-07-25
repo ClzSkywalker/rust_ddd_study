@@ -19,7 +19,7 @@ impl MarkerInterface for CreateUserAbilityCommand {}
 impl Command for CreateUserAbilityCommand {}
 
 impl CreateUserAbilityCommand {
-    fn to_user(&self) -> User {
+    pub fn to_user(&self) -> User {
         User {
             id: 0,
             user_name: self.user_name.clone(),

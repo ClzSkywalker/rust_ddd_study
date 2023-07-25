@@ -1,11 +1,12 @@
-use base::model::ddd::repository::Repository;
-use domain::aggregate::user::{repository::user_repository::{self, IUserRepository}, model::user::User};
+use anyhow::Result;
+use base::model::ddd::{marker_interface::MarkerInterface, repository::Repository};
+use domain::aggregate::user::{model::user::User, repository::user_repository::IUserRepository};
 
-pub struct UserRepositoryImpl{
+pub struct UserRepositoryImpl {}
 
-}
+impl MarkerInterface for UserRepositoryImpl {}
 
-impl Repository<User,String> for UserRepositoryImpl {
+impl Repository<User, String> for UserRepositoryImpl {
     fn delete(id: String) {
         todo!()
     }
@@ -23,8 +24,13 @@ impl Repository<User,String> for UserRepositoryImpl {
     }
 }
 
-impl IUserRepository for UserRepositoryImpl{
-    fn by_user_name(user_name: String) -> domain::aggregate::user::model::user::User {
+#[async_trait::async_trait]
+impl IUserRepository for UserRepositoryImpl {
+    async fn by_user_name(&self, user_name: String) -> Result<User> {
+        todo!()
+    }
+
+    async fn save(&self, u: User) -> Result<User> {
         todo!()
     }
 }

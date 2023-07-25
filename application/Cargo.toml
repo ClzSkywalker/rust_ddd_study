@@ -10,3 +10,4 @@ base={path="../base"}
 domain={path="../domain"}
 chrono = {workspace=true}
 anyhow={workspace=true}
+async-trait = {workspace=true}

@@ -3,15 +3,14 @@ use base::model::ddd::{
     value_object::{self},
 };
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, Clone, PartialEq)]
 pub struct Address {
     pub province: String,
     pub city: String,
     pub county: String,
 }
 
-impl MarkerInterface for Address {
-}
+impl MarkerInterface for Address {}
 
 impl value_object::ValueObject<Address> for Address {
     fn same_value_as(&self, other: &Address) -> bool {

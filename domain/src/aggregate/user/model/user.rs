@@ -6,6 +6,7 @@ use crate::share::valueobject::address::Address;
 
 use super::{role::Role, unit::Unit};
 
+#[derive(Debug,Clone)]
 pub struct User {
     pub id: i32,
     pub user_name: String,
@@ -49,5 +50,9 @@ impl User {
 
     pub fn bind_unit(id: i32) -> Unit {
         Unit { id: id }
+    }
+
+    pub fn print_create(&self) {
+        println!("新增user:{}",self.user_name);
     }
 }

@@ -10,3 +10,5 @@ base={path="../base"}
 
 chrono = {workspace=true}
 anyhow={workspace=true}
+async-trait = {workspace=true}
+uuid={workspace=true}

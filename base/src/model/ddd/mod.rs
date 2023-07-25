@@ -5,3 +5,4 @@ pub mod entity;
 pub mod repository;
 pub mod application_service;
 pub mod command;
+pub mod domain_service;

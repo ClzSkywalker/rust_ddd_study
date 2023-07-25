@@ -1,2 +1,1 @@
-pub trait MarkerInterface {
-}
+pub trait MarkerInterface: Send + Sync {}

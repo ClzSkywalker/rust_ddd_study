@@ -1,5 +1,6 @@
 use base::model::ddd::{entity::Entity, marker_interface::MarkerInterface};
 
+#[derive(Debug,Clone)]
 pub struct Role {
     pub id: i32,
 }
